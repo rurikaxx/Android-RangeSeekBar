@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.SeekBar;
 
@@ -90,7 +89,7 @@ public class RangeSeekBar extends SeekBar{
             // 間距高度
             float rangeHeight = ( maxHeight - paddingLeft - paddingRight ) / (rangeLength - 1);
 
-            // float x_point = maxWidth/2 + fontSize;
+            // text x座標(預設為1/4寬)
             float x_point = maxWidth/4;
 
             // text起點Y座標
@@ -105,11 +104,6 @@ public class RangeSeekBar extends SeekBar{
                     //第一筆資料
                     rangePointY = rangeStartPointY;
                 }
-//                else if( i == (rangeLength-1) )
-//                {
-//                    //最後一筆資料
-//                    rangePointY = -1 * ( maxHeight - paddingRight);
-//                }
                 else
                 {
                     rangePointY = -1 * rangeHeight * i + rangeStartPointY;
@@ -144,13 +138,11 @@ public class RangeSeekBar extends SeekBar{
 
     public void setProgressByText(String targetString)
     {
-        Log.i( "David", " setProgressByValue ");
         for( int i=0; i < rangeLength; i++)
         {
             // Log.i( "David", " setProgressByValue " + rangeList.get(i).toString());
             if( rangeList.get(i).toString().equals(targetString) )
             {
-                Log.i( "David", " setProgressByValue " + (int)(i*range));
                 setProgress((int)(i*range));
             }
         }
@@ -199,8 +191,6 @@ public class RangeSeekBar extends SeekBar{
                 setProgress(setPoint);
                 //每次拖动SeekBar都会调用
                 onSizeChanged(getWidth(), getHeight(), 0, 0);
-
-                Log.i( "David", " getProgressText === " + getProgressText());
                 break;
 
             case MotionEvent.ACTION_CANCEL:

@@ -12,8 +12,8 @@
 
     <www.manycat.net.rangeseekbar.RangeSeekBar
         android:id="@+id/rangeseekbar"
-        android:background="#ff0000"
         android:layout_width="200dp"
-        android:layout_height="300dp"/>
+        android:layout_height="400dp"
+        />
 
 </RelativeLayout>

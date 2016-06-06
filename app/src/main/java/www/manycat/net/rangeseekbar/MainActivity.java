@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         rangeseekbar = (RangeSeekBar)findViewById(R.id.rangeseekbar);
 
         int fontSize = 40;
-        rangeseekbar.onSetRangeAndText( rangList, fontSize);
+        rangeseekbar.setRangeAndText( rangList, fontSize);
         rangeseekbar.setProgressByText("GText");
         rangeseekbar.getProgressText();
     }

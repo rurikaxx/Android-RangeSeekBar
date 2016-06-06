@@ -120,7 +120,7 @@ public class RangeSeekBar extends SeekBar{
         }
     }
 
-    public void onSetRangeAndText( ArrayList<String> rangeList, int fontSize)
+    public void setRangeAndText( ArrayList<String> rangeList, int fontSize)
     {
         this.rangeList = rangeList;
         this.fontSize = fontSize;

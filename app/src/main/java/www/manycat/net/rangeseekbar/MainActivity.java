@@ -16,27 +16,23 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> rangList = new ArrayList<String>();
 
-        rangList.add("普通級");
-        rangList.add("保護級");
-        rangList.add("輔導級(12)");
-        rangList.add("輔導級(15)");
-        rangList.add("限制級");
-
-//        rangList.add("A");
-//        rangList.add("B");
-//        rangList.add("C");
-//        rangList.add("D");
-//        rangList.add("E");
-//        rangList.add("F");
-//        rangList.add("G");
-//        rangList.add("H");
-//        rangList.add("I");
-//        rangList.add("J");
-//        rangList.add("K");
+        rangList.add("AText");
+        rangList.add("BText");
+        rangList.add("CText");
+        rangList.add("DText");
+        rangList.add("EText");
+        rangList.add("FText");
+        rangList.add("GText");
+        rangList.add("HText");
+        rangList.add("IText");
+        rangList.add("JText");
+        rangList.add("KText");
 
         rangeseekbar = (RangeSeekBar)findViewById(R.id.rangeseekbar);
 
-        rangeseekbar.onSetRangeAndText( rangList, 40);
-        rangeseekbar.setProgressByText("輔導級(12)");
+        int fontSize = 40;
+        rangeseekbar.onSetRangeAndText( rangList, fontSize);
+        rangeseekbar.setProgressByText("GText");
+        rangeseekbar.getProgressText();
     }
 }

@@ -21,12 +21,6 @@ public class MainActivity extends AppCompatActivity {
         rangList.add("CText");
         rangList.add("DText");
         rangList.add("EText");
-        rangList.add("FText");
-        rangList.add("GText");
-        rangList.add("HText");
-        rangList.add("IText");
-        rangList.add("JText");
-        rangList.add("KText");
 
         rangeseekbar = (RangeSeekBar)findViewById(R.id.rangeseekbar);
 

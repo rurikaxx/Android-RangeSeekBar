@@ -25,7 +25,9 @@
 
 ###Developed by:
 David Luo(rurikaxx@gmail.com)
+
 這是繼承於Seekbar的簡單客製化RangeSeekbar
+
 如果您在使用上有發現任何問題,歡迎告知我。
 
 ###License:

@@ -1,5 +1,5 @@
 # RangeSeekBar
-### excent自SeekBar的Custom RangeSeekBar
+### excent自SeekBar的簡易Custom RangeSeekBar
 ![Opps! Screen shot has missed](https://github.com/rurikaxx/RangeSeekBar/blob/master/rangseekbar.png)
 
 使用範例
@@ -22,3 +22,11 @@
 
     // 取得當前選擇的Text
     rangeseekbar.getProgressText();
+
+###Developed by:
+David Luo(rurikaxx@gmail.com)
+這是繼承於Seekbar的簡單客製化RangeSeekbar
+如果您在使用上有發現任何問題,歡迎告知我。
+
+###License:
+Copyright 2016 David Luo

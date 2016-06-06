@@ -1,5 +1,5 @@
 # RangeSeekBar
-### excent自SeekBar的簡易Custom RangeSeekBar
+### excents自SeekBar的簡易Custom RangeSeekBar
 ![Opps! Screen shot has missed](https://github.com/rurikaxx/RangeSeekBar/blob/master/rangseekbar.png)
 
 使用範例

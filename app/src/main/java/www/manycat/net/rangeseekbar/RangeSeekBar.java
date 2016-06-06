@@ -23,36 +23,20 @@ public class RangeSeekBar extends SeekBar{
 
     private float range;
 
-    /**
-     * Size of text mark.
-     */
-    private int mTextSize;
-
     public RangeSeekBar(Context context) {
         super(context);
-        initPaint();
     }
 
     public RangeSeekBar(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        initPaint();
     }
 
     public RangeSeekBar(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initPaint();
     }
 
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(h, w, oldh, oldw);
-    }
-
-    private void initPaint() {
-        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
-        mPaint.setAntiAlias(true);
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setTextSize(20);
     }
 
     @Override
@@ -80,19 +64,19 @@ public class RangeSeekBar extends SeekBar{
             int paddingLeft = getPaddingLeft();
             int paddingRight = getPaddingRight();
 
-            // 寬度
+            // Seekbar寬度
             float maxWidth = c.getWidth();
 
-            // 高度
+            // Seekbar高度
             float maxHeight = c.getHeight();
 
-            // 間距高度
+            // 每個range間距的高度
             float rangeHeight = ( maxHeight - paddingLeft - paddingRight ) / (rangeLength - 1);
 
             // text x座標(預設為1/4寬)
             float x_point = maxWidth/4;
 
-            // text起點Y座標
+            // text 起點y座標
             int rangeStartPointY = ( paddingLeft - fontSize/2) * (-1);
 
             for( int i=0; i < rangeLength; i++)
@@ -109,7 +93,7 @@ public class RangeSeekBar extends SeekBar{
                     rangePointY = -1 * rangeHeight * i + rangeStartPointY;
                 }
 
-                // 消除文字paddingBottom
+                // 處理text文字paddingBottom
                 rangePointY = rangePointY - fontSize/8;
 
                 mPaint = new Paint();
@@ -140,7 +124,6 @@ public class RangeSeekBar extends SeekBar{
     {
         for( int i=0; i < rangeLength; i++)
         {
-            // Log.i( "David", " setProgressByValue " + rangeList.get(i).toString());
             if( rangeList.get(i).toString().equals(targetString) )
             {
                 setProgress((int)(i*range));

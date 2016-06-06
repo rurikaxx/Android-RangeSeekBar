@@ -18,7 +18,7 @@
     rangeseekbar.setRangeAndText( rangList, fontSize);
 
     // 設定預設值
-    rangeseekbar.setProgressByText("GText");
+    rangeseekbar.setProgressByText("CText");
 
     // 取得當前選擇的Text
     rangeseekbar.getProgressText();
